@@ -1,0 +1,135 @@
+test_08: Driver login
+---------------------
+Purpose:		To test whether the driver could  login.
+Prereq:   		Driver has already registered physically in the office.
+
+Test Data:    
+				d_email_1    = rms@gnu.org
+				d_password_1 = rstallman
+				
+				d_email_2    = torvalds@osdl.org
+				d_password_2 = ilovelinux
+				
+				d_email_3    = esr@thyrsus.com
+				d_password_3 = eraymond
+				
+				d_email_4    = guido@python.org
+				d_password_4 = gossum
+
+
+
+Steps:        
+				1. Driver launch the app, input his email address, and password, tap "Sign In" button. 
+
+Notes and Questions:
+              1. The driver should be able to login, and the app should led the driver to the next screen. 
+
+
+
+test_09: Search for Passenger
+-----------------------------
+Purpose:		To test whether the driver could search for a p passenger.
+
+Prereq:   		Driver has already logged in.
+
+Test Data:    	No need.
+
+Steps:        
+				1. After driver logged in, he tap the "Look for passenger" button.
+
+Notes and Questions:
+              	1. There should be a several passengers displayed on the map, if they are available.
+
+
+test_10: Bid for Book
+---------------------
+Purpose:		To test whether the driver could check and bid with the passenger.
+
+Prereq:   		Driver has already logged in, and selected a passenger.
+
+Test Data:    	
+				bid_amoutn_1 = 30 RMB
+				bid_time_1 = 10 Mins
+
+				bid_amoutn_2 = 50 RMB
+				bid_time_2 = 20 Mins
+
+				bid_amoutn_3 = 30 RMB
+				bid_time_3 = 15 Mins
+
+				bid_amoutn_4 = 30 RMB
+				bid_time_4 = 30 Mins
+
+				bid_amoutn_4 = a30 RMB		// invalid
+				bid_time_4 = 3o Mins		// invalid: letter 'o', not number 'zero' by mistyping.
+
+Steps:        
+				1. The driver input bid amount and time he would like to bid, tap the "Submit" button. 
+
+Notes and Questions:
+              	1. The App should verify whether the driver's input is valid.
+
+
+test_11: Pick Up Passenger
+--------------------------
+Purpose:		To test whether the driver could notify the system that the passenger has been successfully picked up.
+
+Prereq:   		Driver and the passenger have already reach aggreement on the bid.
+
+Test Data:    	No need.
+
+Steps:        
+				1. After they reach the agreement, the driver goes to pick the passenger. When the passenger is picked, he tap the "Picked" button.
+
+Notes and Questions:
+              	1. A message should sent to the server when the driver tapped "Picked" button.
+
+
+test_12: Drop Passenger (Successfully arrived)
+----------------------------------------------
+Purpose:		To test whether the driver could notify the system that the passenger has arrived his destination.
+
+Prereq:   		The driver has successfully take the passenger to his destination.
+
+Test Data:    	No need.
+
+Steps:        
+				1. After they reach the destination, the driver taps the "Destination Reached" button.
+
+Notes and Questions:
+              	1. A message should sent to the server when the driver tapped "Destination Reached" button.
+
+
+test_13: View Payment Notification
+----------------------------------
+Purpose:		To test whether the driver could view the payment notification.
+
+Prereq:   		The passenger has reached his destination. driver has already tap the "Destination Reached" button to notify the server. 
+
+Test Data:    	No need.
+
+Steps:        
+				1. After the driver tapped the "Destination Reached" button, (as in test_12), a payment notification should be displayed on the screen.
+
+Notes and Questions:
+              	1. The content of the payment notification should include the amount of money the driver earned in this trip.
+
+
+test_14: Rate the Passenger
+---------------------------
+Purpose:		To test whether the driver could rate the passenger.
+
+Prereq:   		The passenger has reached his destination. driver has already tap the "Destination Reached" button to notify the server. 
+
+Test Data:    	
+				rate_1 = 4 stars
+				rate_2 = 3 stars
+				rate_3 = 4.5 stars
+
+Steps:        
+				1. After the driver tapped the "Destination Reached" button, (as in test_12), a rating-bar should appear on the screen for the driver to give his rating.
+				2. The driver taps the rating-star to give his rating.
+				3. Tap the "Submit" button.
+
+Notes and Questions:
+              	1. The rating should be transferred to the server.

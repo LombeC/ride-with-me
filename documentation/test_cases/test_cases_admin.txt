@@ -1,0 +1,207 @@
+test_15: Login (Administrator)
+-------------------------------
+Purpose:		To test whether the administrator could login.
+
+Prereq:   		No.
+
+Test Data:    	
+				admin_1  = lombe
+				passwd_1 = king4all
+				
+				admin_2  = sebastian
+				passwd_2 = hola88
+				
+				admin_3  = yufeng
+				passwd_3 = caesar3
+				
+				-------------------
+				intruder_1 = bill       // intruder, should not login
+				passwd_1   = anything
+				
+				intruder_2 = larry		// intruder, should not login
+				passwd_2   = easypass
+
+Steps:        
+				1. Each administrator enter his user name and password, and click "login", to see whether he could successfully log in.
+				2. Each intruder enter his user name and password, and click "login", to see whether he could successfully log in --- obviously he should NOT.
+
+Notes and Questions:
+              	1. In order to stop the robot intrusion using brute force, we may add a random validation code.
+              	2. We'd better stop an administrator to log in if he entered the wrong password for continuous 5 times.
+
+
+test_16: Add driver
+-------------------
+Purpose:		To test whether the administrator could add a driver to the database.
+
+Prereq:   		The administrator has already logged in.
+
+Test Data:    	
+				driver_id_1       = tblair@bigben.gov.uk
+				driver_passwd_1   = thesunneverfall
+				driver_address_1  = London W27JU UK
+				billing_address_1 = P.O. Box 60519
+				car_no._1         = uk8f37
+				bank_account_1    = 3894793884
+				
+				driver_id_2       = dcameron@bigben.gov.uk
+				driver_passwd_2   = staycalm
+				driver_address_2  = London W73JU UK
+				billing_address_2 = P.O. Box 60659
+				car_no._2         = uurf37
+				bank_account_2    = 3894793688
+				
+				driver_id_3       = gbrown@bigben.gov.uk
+				driver_passwd_3   = carryon
+				driver_address_3  = London W7k9U UK
+				billing_address_3 = P.O. Box 60788
+				car_no._3         = ek67k3
+				bank_account_3    = 3894793234
+
+
+Steps:        
+				1. The administrator click "Add Driver" (or "Register the driver"), there should be a web page to enter the driver information.
+				2. Enter the driver information and click "Submit".
+
+Notes and Questions:
+              	1. Each field of the driver's information should be unique. The system should have a way to check if there's any duplications. (But it is reasonable for the husband and his wife to have the same address and bank account number.)
+
+
+test_17: Update the driver information
+--------------------------------------
+Purpose:		To test whether the administrator could update the  driver's information in the database.
+
+Prereq:   		The administrator has already logged in, and some drivers have been added.
+
+Test Data:    	
+				
+				admin_1  = lombe
+				passwd_1 = king4all
+
+				driver_id_1          = tblair@bigben.gov.uk
+				new_driver_address_1 = London W49JU UK 		// the driver changed his address
+				
+				driver_id_2          = dcameron@bigben.gov.uk
+				new_car_no._2        = uurf74
+				new_bank_account_2   = 38947933455		// the driver changed his car and his bank account number.
+				
+				driver_id_3          = gbrown@bigben.gov.uk
+				driver_passwd_3      = ilovedriving			// the driver reseted his password.
+
+Steps:        
+				1. The administrator select a driver and click "Edit".
+				2. Edit the driver's information and click "Submit".
+
+Notes and Questions:
+              	1. The new information should be updated smoothly, and sync back on the driver's phone.
+
+
+test_18: Remove a driver
+------------------------
+Purpose:		To test whether the administrator could remove a driver in the database.
+
+Prereq:   		The administrator has already logged in, and some drivers have been added.
+
+Test Data:    	
+				admin_1  = lombe
+				passwd_1 = king4all
+
+				driver_id_1  = tblair@bigben.gov.uk
+				driver_id_2  = dcameron@bigben.gov.uk
+			
+			
+Steps:        
+				1. The administrator select a driver and click "Remove".
+				2. The administrator confirm his operation by clicking "Yes".
+
+Notes and Questions:
+              	1. There should be a way to prevent the administrator to remove drivers by accident. Maybe the system should require him to input his password again.
+
+
+test_19: View a driver
+------------------------
+Purpose:		To test whether the administrator could view a driver in the database.
+
+Prereq:   		The administrator has already logged in, and some drivers have been added.
+
+Test Data:    	
+				admin_1  = lombe
+				passwd_1 = king4all
+			
+Steps:        
+				1. The administrator select a driver and click "view".
+				
+Notes and Questions:
+              	1. The administrator should also be able to sort the driver by rating, address, car number, bank account. (we may consider it as an additional feature.)
+
+
+test_20: Update a passenger
+---------------------------
+Purpose:		To test whether the administrator could update a passenger in the database.
+
+Prereq:   		The administrator has already logged in, and there are some passengers registered.
+
+Test Data:    	
+				admin_1      = lombe
+				passwd_1     = king4all
+					
+				passenger_1  = bclinton@whitehouse.gov.us
+				password_1   = president					password_new = oldstory 	//change the password for the passenger.
+				name_1       = Bill Clinton
+				phone_1      =  202-456-1111
+				address_1    = The White House 1600 Pennsylvania Avenue NW   Washington, DC 20500 
+				credit card  = 938589938
+					
+				passenger_2  = jbonde@sp.gov.uk					password_2   = 007
+				name_2       = James Bonde
+				phone_2      =  760-753-7477
+				phone_new    =  760-753-4545	//change the phone number for the passenger.
+				address_2    =  1620 Haydn Dr Cardiff By The Sea, CA 92007-2304 
+				credit card  = 956789938
+
+Steps:        
+				1. The administrator select a passenger and click "edit".
+				2. The administrator update the passenger's information and click "Submit".
+				3. Confirm his operation by clicking "Yes".
+				
+Notes and Questions:
+              	1. Usually the passenger's information is managed by the passenger using the Android application. The administrator have the power to change information for administration purpose.
+
+
+test_21: Remove a passenger
+---------------------------
+Purpose:		To test whether the administrator could remove a passenger in the database.
+
+Prereq:   		The administrator has already logged in, and there are some passengers registered.
+
+Test Data:    	
+				admin_1      = lombe
+				passwd_1     = king4all
+					
+				passenger_1  = bclinton@whitehouse.gov.us
+				passenger_2  = jbonde@sp.gov.uk					
+
+Steps:        
+				1. The administrator select a passenger and click "remove".
+				2. Confirm his operation by clicking "Yes".
+				
+Notes and Questions:
+              	1. The system should have a way to prevent the administrator removing a passenger by accident. Maybe the administrator should input his password again.
+
+
+
+test_22: View a passenger
+-------------------------
+Purpose:		To test whether the administrator could view a passenger in the database.
+
+Prereq:   		The administrator has already logged in, and some passengers have already registered.
+
+Test Data:    	
+				admin_1  = lombe
+				passwd_1 = king4all
+			
+Steps:        
+				1. The administrator select a passenger and click "view".
+				
+Notes and Questions:
+              	1. The administrator should also be able to sort the passenger by rating, address, bank account. (we may consider it as an additional feature.)         	

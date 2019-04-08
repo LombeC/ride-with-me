@@ -1,0 +1,142 @@
+test_01:  Passenger sign up
+---------------------------
+Purpose:      To test whether a passenger can register with his/her email.
+Prereq:       No.
+Test Data:    
+              email_1     = bclinton@whitehouse.gov.us
+              password_1  = president
+              name_1      = Bill Clinton
+              phone_1     =  202-456-1111
+              address_1   = The White House 1600 Pennsylvania Avenue NW   Washington, DC 20500 
+              credit card = 938589938
+
+              email_2     = jbonde@sp.gov.uk
+              password_2  = 007
+              name_2      = James Bonde
+              phone_2     =  760-753-7477
+              address_2   =  1620 Haydn Dr Cardiff By The Sea, CA 92007-2304 
+              credit card = 956789938
+
+Steps:        1. Passenger tap "Register" button to enter register screen.
+              2. Enter email, password, name, phone, address, credit card.
+              3. Tap "Picture" button to select a picture of the passenger from the phone album, or take a picture right now.
+              4. Tap "Sign Up" button.
+              5. See whether the passenger could successfully sign up.
+
+Notes and Questions:
+              1. The App should verify whether the email address the passenger entered is a valid email address automatically.
+              2. The password should be confirmed -- entered twice.
+
+
+test_02: Passenger log in
+--------------------------
+Purpose:      To test whether the passenger can log in properly.
+Prereq:       Passenger already registered. 
+Test Data:    
+              email_1    = bclinton@whitehouse.gov.us
+              password_1 = president
+
+              email_2    = jbonde@sp.gov.uk
+              password_2 = 007
+
+              email_3 = bill gates    //invalid address 
+              email_4 = george@bjtu   //invalid address
+
+Steps:        1. Launch the app RideWithMe in Android phone.
+              2. Input test email, and corresponding password.
+              3. Tap LogIn.
+              4. See whether the passenger could log in.
+
+Notes and Questions:
+              1. The app should verify whether the email address the passenger entered is a valid email address automatically.
+              2. The password should not be displayed -- display dots instead.
+              3. After the passenger logged in, the app should lead the passenger to the "Pick Me Up" screen.
+
+
+test_03:  Pick the passenger (pick me up)
+-----------------------------------------
+Purpose:      To test whether the app could display the passenger's location on the map; and whether the user could start his/her booking process.
+
+Prereq:       Passenger already logged in. 
+Test Data:    The test is based on the user's GPS location, no test data needed.
+
+Steps:        1. Passenger log in.
+              2. See whether the map displayed the passenger's location correctly.
+              3. Tap "Pick Me Up".
+              4. See whether the app could lead the user to the destination selection screen.
+
+Notes and Questions:
+              1. The app should display the passenger's location based on GPS.
+
+
+test_04: Book a ride
+--------------------
+Purpose:      To test whether the passenger could select his destination by Google Maps search.
+Prereq:       Passenger already logged in. 
+
+Test Data:    destination_1 = sanlitun
+              destination_2 = wudaokou
+              destination_3 = the summer palace
+              destination_4 = No Such a place in Beijing     //place that doesn't exist.
+
+Steps:        1. Passenger type the destination into the Destination search box, and tap "Search".
+              2. See whether the map displayed the passenger's destination correctly.
+              3. Tap "Book a ride".
+              4. See whether the app could display a list of drivers for selection.
+
+Notes and Questions:
+              1. The app should display the destination on map.
+              2. If the destination the passenger input a invalid address, the app should provide a notification to the passenger, and a way to correct his/her input.
+
+test_05: Choose Car
+-------------------
+Purpose:      To test whether the passenger could check the details of a driver, and choose a driver.
+Prereq:       Passenger already logged in, and his/her destination is valid. 
+
+Test Data:    driver_1 = Barack Obama
+              driver_2 = George W. Bush
+              driver_3 = Bill Clinton
+              driver_4 = Ronald Reagon
+              driver_5 = Jimmy Carter
+              driver_6 = Gerald Ford
+
+Steps:        1. Passenger select a driver by tap "Deatils" and check the driver's information.
+              2. Passenger tap the back key to check for another driver's details.
+              3. Repeat steps 1 and 2, until he find the driver best satisfied him/her.
+              4. The passenger tap "Choose" to choose this driver.
+
+Notes and Questions:
+              1. The passenger should be able to view several nearby driver's details.
+
+              
+test_06: Alert the driver to arrive faster (Hurry up)
+-----------------------------------------------------
+Purpose:      To test whether the passenger could alert the driver to come to pick the passenger faster.
+
+Prereq:       Passenger has already chosen a driver, and the driver accepted.
+
+Test Data:    No need.
+
+Steps:        1. Passenger tap "Hurry up" button to alert the driver.
+              2. Repeat step 1 several times.
+
+Notes and Questions:
+              1. When the passenger tap the "hurry up" button, the driver should receive a "hurry up" message.
+
+
+test_07: View Payment Notification and Rate The Driver
+------------------------------------------------------
+Purpose:      To test whether the passenger could view the payment notification
+Prereq:       Destination arrived.
+
+Test Data:    No need.
+
+Steps:        1. Passenger tap "I've Arrived" button. The app should display the payment information, and invite the passenger to rate the driver.
+              2. The passenger give the driver 4-star rating, and tap the "submit" button.
+              3. Start a new test process, give the driver 1, 2, 3, 4, 5 stars rating each time by repeat step 1 and 2.
+
+Notes and Questions:
+              1. During the process the passenger gives the driver a rating, he should be able to
+              change his mind by edit the rating before he tap the "Submit" button.
+
+

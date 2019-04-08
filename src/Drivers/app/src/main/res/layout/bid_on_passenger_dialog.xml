@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@android:color/background_light"
+    android:id="@+id/bidOnPassenger">
+
+    <EditText
+        android:id="@+id/bidding_fee"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Fee (RMB)"
+        android:numeric="integer|decimal"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/bidding_time_to_arrival"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Time till Arrival (Minutes)"
+        android:numeric="integer"
+        android:inputType="number" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="22dp"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bidding_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center|top"
+        >
+
+        <Button
+            android:id="@+id/btnBiddingCancel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:background="@drawable/shape_button"
+            android:layout_gravity="top"
+            android:shadowColor="#ffffffff"
+            android:singleLine="false"
+            android:textColor="#FF1422FF" />
+
+        <FrameLayout
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"></FrameLayout>
+
+
+        <Button
+            android:id="@+id/btnBiddingSubmit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:background="#ff1422ff"
+            style="?android:attr/buttonBarStyle"
+            android:textColor="#ffffffff" />
+
+    </LinearLayout>
+
+</LinearLayout>

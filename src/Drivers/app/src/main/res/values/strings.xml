@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ride With Me for Drivers</string>
+    <string name="sign_in_register_button">Register</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="sign_in_password_hint">Password</string>
+    <string name="sign_in_email_hint">Email</string>
+    <string name="registration_label">Please enter your registration information</string>
+    <string name="updateProfileLabel">Update Your Profile</string>
+    <string name="registration_name_hint">Name</string>
+    <string name="registration_email_hint">email</string>
+    <string name="registration_password_hint">Password</string>
+    <string name="registration_phone_number_hint">Phone Number</string>
+    <string name="registration_address_hint">Address</string>
+    <string name="registration_credit_card_hint">Credit Card Number</string>
+    <string name="registration_select_picture_button_label">Select Picture</string>
+    <string name="registration_submit_button_label">Submit</string>
+    <string name="title_activity_main">Ride With Me Passenger</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="markerFeeLabelText">Is asking for:\u0020</string>
+    <string name="markerFeeYuanLabelText"> \u0020Yuan</string>
+    <string name="markerArrivalTimeLabelText">Will be there in:\u0020</string>
+    <string name="markerMinLabelText">\u0020Minutes.</string>
+    <string name="drawer_picture_description">Profile Picture</string>
+    <string name="driver_profile_picture">Driver\'s profile picture</string>
+    <string name="title_activity_register">Register</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Picture">Picture</string>
+    <string name="title_activity_update__profile">Update_Profile</string>
+    <string name="title_activity_driver_review">DriverReview</string>
+    <string name="markerCarInformationLabelText">Drives a:\u0020</string>
+    <string name="markerOriginLabelText">Is going from:\u0020</string>
+    <string name="markerDestinationText">to:\u0020</string>
+    <string name="title_activity_passenger_review">PassengerReview</string>
+
+</resources>

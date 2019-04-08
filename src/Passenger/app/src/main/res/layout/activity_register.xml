@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.ridewithme.passenger.Register"
+    android:id="@+id/register">
+
+
+    <TextView
+        android:id="@+id/registration_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registration_label"
+        android:layout_gravity="center"
+        style="@style/FullscreenTheme"
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/registration_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/registration_name_hint"
+        style="@style/FullscreenTheme"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/registration_address"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/registration_password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/registration_password_hint"
+        android:inputType="textPassword"
+        style="@style/FullscreenTheme"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/register_buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/registration_phone_number"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/registration_phone_number_hint"
+        android:inputType="phone"
+        style="@style/FullscreenTheme"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/registration_credit_card"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/registration_credit_card"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/registration_credit_card_hint"
+        android:inputType="number"
+        style="@style/FullscreenTheme"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/registration_email"
+        android:layout_alignParentLeft="true" />
+    <LinearLayout
+        android:id="@+id/register_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_below="@+id/registration_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="64dp">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit_registration"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/registration_submit_button_label"
+        android:background="@android:color/holo_blue_bright"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/registration_title"
+        android:layout_alignEnd="@+id/registration_title" />
+
+    <EditText
+        style="@style/FullscreenTheme"
+        android:id="@+id/registration_address"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/registration_address_hint"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/registration_phone_number"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        style="@style/FullscreenTheme"
+        android:id="@+id/registration_email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/registration_email_hint"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/registration_password"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/registration_select_picture_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Picture"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_alignTop="@+id/btn_submit_registration"
+        android:layout_toRightOf="@+id/register_buttons" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/registration_Confirm_Password"
+        android:layout_below="@+id/registration_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/registration_name"
+        android:layout_alignEnd="@+id/registration_name"
+        android:hint="Confirm Password"
+        android:textSize="16dp"
+        android:textIsSelectable="false" />
+
+</RelativeLayout>

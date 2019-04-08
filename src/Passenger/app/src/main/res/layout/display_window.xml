@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+    <ImageView
+        android:id="@+id/markerImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:adjustViewBounds="false"
+        android:layout_gravity="left"
+        android:contentDescription="@string/driver_profile_picture"
+        android:maxHeight="90dp"
+        android:maxWidth="90dp"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/markerProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <RatingBar
+            android:id="@+id/markerRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/markerCarInformationLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+                <TextView
+                    android:id="@+id/markerCarInformationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/markerCarInformationLabelText"
+                    />
+                <TextView
+                    android:id="@+id/markerCarInformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                    />
+        </LinearLayout>
+
+        <!--Displays Arrival time information-->
+
+        <LinearLayout
+            android:id="@+id/markerArrivalTimeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/markerArrivalTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/markerArrivalTimeLabelText"
+                />
+                <TextView
+                    android:id="@+id/markerArrivalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/markerMinLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/markerMinLabelText"
+                />
+        </LinearLayout>
+
+        <!-- Displays Fee information-->
+
+        <LinearLayout
+            android:id="@+id/markerFeeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/markerFeeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/markerFeeLabelText"
+                />
+
+                <TextView
+                    android:id="@+id/markerFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                />
+
+                <TextView
+                    android:id="@+id/markerFeeYuanLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/markerFeeYuanLabelText"
+                />
+
+            </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="75dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#F0F0F0"
+        ></View>
+</LinearLayout>
